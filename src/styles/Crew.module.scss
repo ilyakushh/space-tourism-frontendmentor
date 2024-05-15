@@ -1,0 +1,102 @@
+.crew {
+  flex-grow: 1;
+  position: relative;
+  & img {
+    position: absolute;
+    right: 15%;
+    bottom: 0;
+    max-width: 25%;
+    height: auto;
+  }
+}
+
+.crewInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.desc {
+  & span {
+    font-size: 32px;
+    opacity: 0.5;
+    text-transform: uppercase;
+    font-family: "Bellefair", serif;
+  }
+  & h3 {
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+  & p {
+    color: #d0d6f9;
+    font-size: 18px;
+    max-width: 350px;
+  }
+}
+
+.circles {
+  margin-top: 80px;
+  display: flex;
+  gap: 20px;
+  & .circle.active {
+    opacity: 1;
+    &:hover {
+      transform: none;
+    }
+  }
+  & .circle {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    opacity: 0.2;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s all;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .crewWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    & img {
+      position: static;
+      max-width: 50%;
+      margin-top: 30px;
+    }
+  }
+  .desc p {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  .circles {
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .crewWrapper img {
+    order: 1;
+    margin-bottom: 20px;
+    max-width: 70%;
+  }
+  .desc {
+    & span {
+      font-size: 16px;
+    }
+    & p {
+      font-size: 15px;
+      max-width: 100%;
+    }
+  }
+  .crewInfo {
+    order: 2;
+  }
+  .circles {
+    order: 3;
+  }
+}

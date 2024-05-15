@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  color: #ffff;
+  background-color: #0b0d17;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  outline: none;
+}
+
+button {
+  border: 0;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 1110px;
+  margin: 0 auto;
+}

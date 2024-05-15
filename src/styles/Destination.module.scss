@@ -1,0 +1,94 @@
+.planetsInfo {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.desc {
+  text-align: center;
+  & .active {
+    border-bottom: 3px solid #fff;
+  }
+  & > p {
+    color: #d0d6f9;
+    line-height: 32px;
+    margin-bottom: 50px;
+  }
+}
+
+.planets {
+  display: flex;
+  gap: 35px;
+  margin-bottom: 70px;
+  & p {
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding-bottom: 10px;
+  }
+}
+
+.travelInfo {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+  width: 100%;
+  & span {
+    font-size: 14px;
+    color: #d0d6f9;
+    letter-spacing: 2.36px;
+    text-transform: uppercase;
+  }
+  & p {
+    font-family: "Bellefair", serif;
+    font-size: 28px;
+    margin-top: 15px;
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .planetsInfo {
+    grid-template-columns: none;
+    justify-items: center;
+    gap: 50px;
+  }
+  .desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+    & hr {
+      width: 100%;
+    }
+  }
+  .planets {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .destination h4 {
+    margin-bottom: 20px;
+  }
+  .planets p {
+    font-size: 14px;
+    letter-spacing: 2.36px;
+  }
+  .planetsInfo img {
+    width: 200px;
+    height: 200px;
+  }
+  .travelInfo {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .desc {
+    width: 100%;
+    & > p {
+      margin-bottom: 10px;
+    }
+  }
+  .planets {
+    margin-bottom: 10px;
+  }
+}

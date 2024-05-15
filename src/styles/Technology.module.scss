@@ -1,0 +1,106 @@
+.technology {
+  position: relative;
+  & img {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    border-radius: 20px;
+  }
+}
+
+.technologyInfo {
+  display: flex;
+  gap: 75px;
+  margin-top: 120px;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  & .active {
+    color: #0b0d17;
+    background-color: #fff;
+  }
+  & .page {
+    font-family: "Bellefair", serif;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transition: 0.5s all;
+    cursor: pointer;
+  }
+}
+
+.desc {
+  & span {
+    color: #d0d6f9;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+  }
+
+  & h3 {
+    margin: 10px 0 20px 0;
+  }
+
+  & p {
+    color: #d0d6f9;
+    font-size: 18px;
+    max-width: 40%;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .technology {
+    & img {
+      width: 30%;
+      height: auto;
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .technologyWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .technologyInfo {
+    order: 2;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  .technology img {
+    order: 1;
+    position: static;
+    width: 50%;
+  }
+  .pagination {
+    flex-direction: row;
+  }
+  .desc p {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .pagination .page {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .desc p {
+    font-size: 15px;
+  }
+  .technology img {
+    width: 80%;
+  }
+}
